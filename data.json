@@ -1,30 +1,79 @@
 {
+  "college_name": "GITAM University",
+  "overview": "GITAM (Gandhi Institute of Technology and Management) is a Deemed-to-be University with campuses in Visakhapatnam, Hyderabad, and Bengaluru. It is known for engineering, management, science and pharmacy education. It offers excellent infrastructure, placements, and research facilities.",
+  
   "courses": [
-    "B.Tech Computer Science",
-    "B.Tech Mechanical",
+    "B.Tech Computer Science Engineering",
+    "B.Tech Information Technology",
+    "B.Tech Electronics and Communication Engineering",
+    "B.Tech Mechanical Engineering",
+    "B.Tech Civil Engineering",
+    "B.Tech Biotechnology",
+    "BBA",
     "BCA",
+    "B.Sc (Computer Science)",
+    "MBA",
+    "M.Tech",
     "MCA",
-    "MBA"
+    "Pharmacy (B.Pharm & M.Pharm)",
+    "Law (BA LLB / BBA LLB)",
+    "Science (Physics, Chemistry, Math)",
+    "Humanities & Social Science",
+    "Architecture & Design"
   ],
-  "admission_process": "Apply online → Entrance exam → Document verification → Admission confirmation.",
+
   "fees": {
-    "B.Tech": "₹85,000 per year",
-    "BCA": "₹45,000 per year",
-    "MBA": "₹1,20,000 per year"
+    "B.Tech": "₹2,50,000 per year (approx.)",
+    "MBA": "₹4,00,000 per year",
+    "BBA": "₹1,50,000 per year",
+    "BCA": "₹1,20,000 per year",
+    "Pharmacy": "₹1,70,000 per year",
+    "Hostel": "₹80,000 – ₹1,50,000 depending on AC/non-AC"
   },
-  "contact": {
-    "email": "info@yourcollege.com",
-    "phone": "+91 9876543210"
-  },
+
+  "admission_process": "Apply online → Appear for GAT (GITAM Admission Test) → Merit list → Counseling → Document verification → Fee payment → Admission confirmation.",
+
   "placements": {
-    "criteria": "Minimum 6.0 CGPA, no active backlogs, and 75% attendance.",
+    "criteria": "Minimum 6.0 CGPA, no active backlogs, 75% attendance.",
     "companies": [
       "TCS",
-      "Infosys",
       "Wipro",
+      "Infosys",
       "Accenture",
-      "HCL"
+      "Amazon",
+      "IBM",
+      "HCL",
+      "Deloitte",
+      "Capgemini"
     ],
-    "stats": "Average package: ₹4.5 LPA, Highest: ₹12 LPA"
-  }
+    "stats": "Average package: ₹5.2 LPA, highest package: ₹32 LPA, placement rate: 92%."
+  },
+
+  "contact": {
+    "email": "admissions@gitam.edu",
+    "phone": "+91 88808 20000",
+    "address": "GITAM University, Visakhapatnam, Andhra Pradesh"
+  },
+
+  "hostel": {
+    "rooms": "2-sharing, 3-sharing, 4-sharing",
+    "ac": "AC and Non-AC both available",
+    "wifi": "24×7 High-speed WiFi",
+    "mess": "Vegetarian & Non-Veg food available",
+    "security": "24×7 security and CCTV",
+    "fees": "₹80,000 – ₹1,50,000"
+  },
+
+  "facilities": [
+    "Central Library",
+    "Modern Laboratories",
+    "Hostels",
+    "Sports Complex",
+    "Cafeteria",
+    "Wi-Fi Campus",
+    "Auditorium",
+    "Gym & Fitness Center",
+    "Medical Center",
+    "Transportation"
+  ]
 }
