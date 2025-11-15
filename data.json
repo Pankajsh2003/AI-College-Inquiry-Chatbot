@@ -15,5 +15,16 @@
   "contact": {
     "email": "info@yourcollege.com",
     "phone": "+91 9876543210"
+  },
+  "placements": {
+    "criteria": "Minimum 6.0 CGPA, no active backlogs, and 75% attendance.",
+    "companies": [
+      "TCS",
+      "Infosys",
+      "Wipro",
+      "Accenture",
+      "HCL"
+    ],
+    "stats": "Average package: ₹4.5 LPA, Highest: ₹12 LPA"
   }
 }
