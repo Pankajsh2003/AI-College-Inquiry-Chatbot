@@ -1,0 +1,19 @@
+{
+  "courses": [
+    "B.Tech Computer Science",
+    "B.Tech Mechanical",
+    "BCA",
+    "MCA",
+    "MBA"
+  ],
+  "admission_process": "Apply online → Entrance exam → Document verification → Admission confirmation.",
+  "fees": {
+    "B.Tech": "₹85,000 per year",
+    "BCA": "₹45,000 per year",
+    "MBA": "₹1,20,000 per year"
+  },
+  "contact": {
+    "email": "info@yourcollege.com",
+    "phone": "+91 9876543210"
+  }
+}
