@@ -5,37 +5,45 @@ class CollegeChatbot:
         with open(data_path, "r") as file:
             self.data = json.load(file)
 
-    def get_response(self, user_input):
-        text = user_input.lower()
+    def get_response(self, text):
+        text = text.lower()
 
-        # ---- COURSES ----
-        course_keywords = ["course", "courses", "program", "branch", "study", "offer"]
-        if any(word in text for word in course_keywords):
+        # ----- COURSES -----
+        if any(word in text for word in ["course", "courses", "program", "branch"]):
             return "Available Courses:\n- " + "\n- ".join(self.data["courses"])
 
-        # ---- FEES ----
-        fee_keywords = ["fee", "fees", "cost", "price", "structure", "pay"]
-        if any(word in text for word in fee_keywords):
+        # ----- FEES -----
+        if any(word in text for word in ["fee", "fees", "cost", "price"]):
             fees = "\n".join([f"{k}: {v}" for k, v in self.data["fees"].items()])
             return "Fee Structure:\n" + fees
 
-        # ---- ADMISSION ----
-        admission_keywords = ["admission", "apply", "process", "entrance", "form"]
-        if any(word in text for word in admission_keywords):
-            return f"Admission Process:\n{self.data['admission_process']}"
+        # ----- ADMISSION -----
+        if any(word in text for word in ["admission", "apply", "process", "entrance"]):
+            return "Admission Process:\n" + self.data["admission_process"]
 
-        # ---- CONTACT ----
-        contact_keywords = ["contact", "call", "email", "phone", "reach", "support"]
-        if any(word in text for word in contact_keywords):
+        # ----- CONTACT -----
+        if any(word in text for word in ["contact", "email", "phone", "call"]):
             c = self.data["contact"]
-            return f"Contact:\n📧 {c['email']}\n📞 {c['phone']}"
+            return f"Contact Details:\nEmail: {c['email']}\nPhone: {c['phone']}"
 
-        # ---- DEFAULT ----
+        # ----- PLACEMENTS -----
+        placement_keywords = ["placement", "placements", "job", "campus", "company", "criteria"]
+        if any(word in text for word in placement_keywords):
+            p = self.data["placements"]
+            return (
+                "**Placement Details:**\n\n"
+                f"📌 **Criteria**: {p['criteria']}\n"
+                f"📌 **Companies**: {', '.join(p['companies'])}\n"
+                f"📌 **Stats**: {p['stats']}"
+            )
+
+        # ----- DEFAULT -----
         return (
             "Sorry, I couldn't understand your question.\n\n"
-            "You can ask me about:\n"
+            "You can ask about:\n"
             "- Courses\n"
             "- Fees\n"
-            "- Admission Process\n"
-            "- Contact Information"
+            "- Admission\n"
+            "- Contact\n"
+            "- Placements"
         )
