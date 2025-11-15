@@ -3,18 +3,35 @@ from chatbot import CollegeChatbot
 
 st.set_page_config(page_title="AI College Chatbot", layout="centered")
 
-# Stylish UI
+# Better Colors for Dark Mode
 st.markdown("""
-    <h1 style='text-align:center; color:#4CAF50;'>🤖 AI College Inquiry Chatbot</h1>
-    <p style='font-size:18px; text-align:center;'>
-        Ask anything about courses, fees, admission, or contact details!
-    </p>
-    <hr>
+    <style>
+        .response-box {
+            background-color: #2E7D32; 
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+            font-size: 18px;
+        }
+        .title {
+            text-align:center; 
+            color:#4CAF50;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            text-align:center;
+            font-size: 18px;
+            color:#BBBBBB;
+        }
+    </style>
 """, unsafe_allow_html=True)
+
+st.markdown("<h1 class='title'>🤖 AI College Chatbot</h1>", unsafe_allow_html=True)
+st.markdown("<p class='subtitle'>Ask about courses, fees, admission, placements, or contact</p>", unsafe_allow_html=True)
 
 bot = CollegeChatbot()
 
-# Input box
 user_input = st.text_input("💬 Type your question here:")
 
 if st.button("Ask"):
@@ -22,11 +39,6 @@ if st.button("Ask"):
         st.warning("⚠ Please enter a question.")
     else:
         response = bot.get_response(user_input)
-        st.markdown(f"""
-            <div style='padding:15px; border-radius:10px; background:#E8F5E9; font-size:18px;'>
-                <b>Chatbot:</b> {response}
-            </div>
-        """, unsafe_allow_html=True)
+        st.markdown(f"<div class='response-box'>{response}</div>", unsafe_allow_html=True)
 
-st.markdown("<hr>", unsafe_allow_html=True)
-st.markdown("<p style='text-align:center;'>Made with ❤️ in Streamlit</p>", unsafe_allow_html=True)
+st.markdown("<br><center>Made with ❤️ in Streamlit</center>", unsafe_allow_html=True)
